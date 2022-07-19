@@ -1,15 +1,15 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector:'products-manager',
-  template:` <product
+  selector: 'products-manager',
+  template: `<product
   *ngFor="let prod of products"
   [name]="prod.name"
   [price]="prod.price"
 ></product>`,
-  styles:['']
+  styles: [''],
 })
-export class ProductsManagerComponent{
+export class ProductsManagerComponent {
   public products = [
     { name: 'Nokia', price: 15000 },
     { name: 'Samsung', price: 25000 },
