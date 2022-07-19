@@ -3,12 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
 import { CounterComponent } from './counterComponent';
-import { ProductsManagerComponent } from './product/products-manager.component';
-import { HelloComponent } from './hello.component';
+import { ProductsManagerComponent } from './products/products-manager.component';
 import { RouterModule } from '@angular/router';
-import { BooksManagementComponent } from './books/booksmanagercomponent';
+import { BooksManagementComponent } from './books/books-manager.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -28,14 +26,7 @@ import { CommonModule } from '@angular/common';
       },
     ]),
   ],
-  declarations: [
-    AppComponent,
-    HelloComponent,
-    ProductComponent,
-    CounterComponent,
-    ProductsManagerComponent,
-    BooksManagementComponent,
-  ],
+  declarations: [AppComponent, CounterComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
