@@ -31,7 +31,7 @@ import { TestManagerComponent } from './test/test-manager.component';
         component: BooksManagementComponent,
       },
       {
-        path: 'Test',
+        path: 'test',
         component: TestManagerComponent,
       },
     ]),

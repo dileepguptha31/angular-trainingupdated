@@ -1,0 +1,32 @@
+<div
+  *ngFor="let question of questions"
+  style="border:1px solid black;margin: 10px;padding:10px"
+>
+  <div>{{ question.statement }}</div>
+  <div>
+    <label>
+      <input type="radio" name="option" />
+      {{ question.option1 }}
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="option" />
+      {{ question.option2 }}
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <input type="radio" name="option" />
+      {{ question.option3 }}
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <input type="radio" name="option" />
+      {{ question.option4 }}
+    </label>
+  </div>
+</div>
