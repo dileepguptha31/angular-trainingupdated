@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counterComponent';
 import { ProductsManagerComponent } from './products/products-manager.component';
 import { RouterModule } from '@angular/router';
 import { BooksManagementComponent } from './books/books-manager.component';
@@ -26,7 +25,7 @@ import { CommonModule } from '@angular/common';
       },
     ]),
   ],
-  declarations: [AppComponent, CounterComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
