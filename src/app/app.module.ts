@@ -9,6 +9,8 @@ import { BooksManagementComponent } from './books/books-manager.component';
 import { CommonModule } from '@angular/common';
 import { ProductsModule } from './products/products.module';
 import { BooksModule } from './books/books.module';
+import { TestModule } from './test/test.module';
+import { TestManagerComponent } from './test/test-manager.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { BooksModule } from './books/books.module';
     CommonModule,
     ProductsModule,
     BooksModule,
+    TestModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/products', pathMatch: 'full' },
       {
@@ -26,6 +29,10 @@ import { BooksModule } from './books/books.module';
       {
         path: 'books',
         component: BooksManagementComponent,
+      },
+      {
+        path: 'Test',
+        component: TestManagerComponent,
       },
     ]),
   ],
