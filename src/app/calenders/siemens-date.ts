@@ -34,6 +34,11 @@ export class SiemensDate {
     );
   }
 
+  public static getDate(year, month): SiemensDate {
+    const current = new Date();
+    return new SiemensDate(1, month, year, 12, 0, 0);
+  }
+
   public static getTotalDaysInMonth(year: number, month: number): number {
     return new Date(
       year, // year
