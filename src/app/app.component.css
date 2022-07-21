@@ -10,9 +10,13 @@ a {
   border-radius: 20px;
   min-width: 100px;
   text-align: center;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 a:hover {
   background-color: cyan;
+}
+
+.selected {
+  background-color: aqua;
 }

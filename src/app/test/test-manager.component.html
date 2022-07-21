@@ -1,32 +1,62 @@
-<div
-  *ngFor="let question of questions"
-  style="border:1px solid black;margin: 10px;padding:10px"
->
-  <div>{{ question.statement }}</div>
-  <div>
-    <label>
-      <input type="radio" name="option" />
-      {{ question.option1 }}
-    </label>
-  </div>
-  <div>
-    <label>
-      <input type="radio" name="option" />
-      {{ question.option2 }}
-    </label>
+<ng-container *ngIf="isFinished === false">
+  <div
+    *ngFor="let question of questions; let qi = index"
+    style="border:1px solid black;margin: 10px;padding:10px"
+  >
+    <div>{{ question.statement }}</div>
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="option_{{ qi }}"
+          [value]="1"
+          [(ngModel)]="question.userOption"
+        />
+        {{ question.option1 }}
+      </label>
+    </div>
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="option_{{ qi }}"
+          [value]="2"
+          [(ngModel)]="question.userOption"
+        />
+        {{ question.option2 }}
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="option_{{ qi }}"
+          [value]="3"
+          [(ngModel)]="question.userOption"
+        />
+        {{ question.option3 }}
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="option_{{ qi }}"
+          [value]="4"
+          [(ngModel)]="question.userOption"
+        />
+        {{ question.option4 }}
+      </label>
+    </div>
   </div>
 
-  <div>
-    <label>
-      <input type="radio" name="option" />
-      {{ question.option3 }}
-    </label>
-  </div>
-
-  <div>
-    <label>
-      <input type="radio" name="option" />
-      {{ question.option4 }}
-    </label>
-  </div>
+  <br />
+  <br />
+</ng-container>
+<button *ngIf="!isFinished" (click)="finish()">Finish</button>
+<br />
+<div *ngIf="isFinished === true">
+  You obtained {{ userMarks }} out of {{ totalMarks }}
 </div>

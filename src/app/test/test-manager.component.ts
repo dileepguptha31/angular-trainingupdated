@@ -15,6 +15,7 @@ export class TestManagerComponent {
       option4: 'A4',
       correctAnswer: 1,
       marks: 5,
+      userOption: 0,
     },
     {
       statement: 'BBB',
@@ -24,6 +25,7 @@ export class TestManagerComponent {
       option4: 'B4',
       correctAnswer: 1,
       marks: 5,
+      userOption: 0,
     },
     {
       statement: 'CCC',
@@ -33,6 +35,23 @@ export class TestManagerComponent {
       option4: 'C4',
       correctAnswer: 1,
       marks: 5,
+      userOption: 0,
     },
   ];
+
+  public isFinished = false;
+  public totalMarks = 0;
+  public userMarks = 0;
+  public finish() {
+    this.totalMarks = 0;
+    this.userMarks = 0;
+    for (let question of this.questions) {
+      if (question.userOption === question.correctAnswer) {
+        this.userMarks += question.marks;
+      }
+
+      this.totalMarks += question.marks;
+      this.isFinished = true;
+    }
+  }
 }
