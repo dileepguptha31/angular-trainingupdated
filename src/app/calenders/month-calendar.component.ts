@@ -40,4 +40,28 @@ import { Component } from '@angular/core';
 export class MonthCalendarComponent {
   public monthName = 'January';
   public dayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  public monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  public year: number;
+  public month: number;
+  public today: number;
+  constructor(/* this = receives reference of newly created object */) {
+    const current = new window.Date();
+    this.year = current.getFullYear();
+    this.month = current.getMonth() + 1;
+    this.today = current.getDate();
+    this.monthName = this.monthNames[this.month - 1];
+  }
 }
