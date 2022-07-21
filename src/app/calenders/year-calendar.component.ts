@@ -4,19 +4,28 @@ import { Component } from '@angular/core';
   selector: 'year-calendar',
   template: `
 
-    <h1>2022</h1>
-    <month-calendar [year]="2022" [month]="1"></month-calendar>
-    <month-calendar [year]="2022" [month]="2"></month-calendar>
-    <month-calendar [year]="2022" [month]="3"></month-calendar>
-    <month-calendar [year]="2022" [month]="4"></month-calendar>
-    <month-calendar [year]="2022" [month]="5"></month-calendar>
-    <month-calendar [year]="2022" [month]="6"></month-calendar>
-    <month-calendar [year]="2022" [month]="7"></month-calendar>
-    <month-calendar [year]="2022" [month]="8"></month-calendar>
-    <month-calendar [year]="2022" [month]="9"></month-calendar>
-    <month-calendar [year]="2022" [month]="10"></month-calendar>
-    <month-calendar [year]="2022" [month]="11"></month-calendar>
-    <month-calendar [year]="2022" [month]="12"></month-calendar>
+    <div>
+      <button (click)="previous()">Previous</button>
+      <h1>{{year}}</h1>
+      <button (click)="next()">Next</button>
+    </div>
+
+    <month-calendar *ngFor="let month of months" [year]="year" [month]="month"></month-calendar>
   `,
 })
-export class YearCalendarComponent {}
+export class YearCalendarComponent {
+  public year = 2022;
+  public months = [];
+  constructor() {
+    for (let i = 1; i <= 12; i++) {
+      this.months.push(i);
+    }
+  }
+
+  previous() {
+    this.year--;
+  }
+  next() {
+    this.year++;
+  }
+}

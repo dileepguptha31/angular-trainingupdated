@@ -37,4 +37,10 @@ export class MonthCalendarComponent {
       this.date = SiemensDate.getDate(this.year, this.month);
     }
   }
+
+  ngOnChanges() {
+    if (this.year && this.month) {
+      this.date = SiemensDate.getDate(this.year, this.month);
+    }
+  }
 }
