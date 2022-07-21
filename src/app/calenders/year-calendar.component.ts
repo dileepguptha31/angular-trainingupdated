@@ -5,10 +5,6 @@ import { Component } from '@angular/core';
   template: `
  <month-calendar></month-calendar>
   `,
-  styles: [
-    `
-
-  `,
-  ],
+  styles: [``],
 })
 export class YearCalendarComponent {}
