@@ -10,6 +10,7 @@ import { BooksModule } from './books/books.module';
 import { TestModule } from './test/test.module';
 import { ClocksModule } from './clocks/clocks.module';
 import { routs } from './routs';
+import { CalendarsModule } from './calenders/calendars.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { routs } from './routs';
     BooksModule,
     TestModule,
     ClocksModule,
+    CalendarsModule,
     RouterModule.forRoot(routs),
   ],
   declarations: [AppComponent],
