@@ -22,6 +22,25 @@ export class SiemensDate {
     this.second = second;
   }
 
+  public getDay() {
+    return this.day;
+  }
+  public getMonth() {
+    return this.month;
+  }
+  public getYear() {
+    return this.year;
+  }
+  public getHour() {
+    return this.hour;
+  }
+  public getMinute() {
+    return this.minute;
+  }
+  public getSecond() {
+    return this.second;
+  }
+
   public static getCurrentDate(): SiemensDate {
     const current = new Date();
     return new SiemensDate(
