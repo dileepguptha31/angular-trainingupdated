@@ -27,4 +27,13 @@ export class BooksManagementComponent {
   public display() {
     this.data = JSON.stringify(this.books);
   }
+
+  ngOnInti() {
+    const xhr = window.XMLHttpRequest();
+    xhr.open('get', 'https://node-axuh5n--9000.local.webcontainer.io', true);
+    xhr.onload = () => {
+      console.log(xhr.responseText);
+    };
+    xhr.send();
+  }
 }
